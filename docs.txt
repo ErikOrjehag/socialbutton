@@ -1,0 +1,6 @@
+
+How to install Cairo which the NPM Canvas package is dependent upon.
+
+$ brew install cairo
+$ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+$ npm --save install canvas

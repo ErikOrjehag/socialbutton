@@ -1,0 +1,30 @@
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+  line-height: 150%;
+  color: #666;
+  margin: 0;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+a {
+  color: #81accc;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px dotted #81accc;
+}
+
+.thanks {
+  text-align: center;
+  height: 107px;
+  width: 300px;
+  margin: -35px -150px;
+  top: 30%;
+  left: 50%;
+  position: absolute;
+}

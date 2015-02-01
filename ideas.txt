@@ -1,0 +1,7 @@
+
+
+Social button on GitHub
+[![Tweet](https://img.socialbutton.net?style=...&service=...&action=...&url=...](http://share.socialbutton.net?service=...&action=...&url=...)
+
+Social button in HTML (used on blogs, in forums, watevs)
+<a href="http://share.socialbutton.net?service=...&action=...&url=..."><img src="https://img.socialbutton.net?style=...&service=...&action=...&url=..."/></a>
