@@ -26,7 +26,7 @@ module.exports = function (service, action, url, callback) {
 
   // Add actual count to the cache
   fetch[service][action](url, function (error, num) {
-    if (error) return console.log(error);
+    if (error) return log.error(error);
 
     mongoose
     .model('CountCache')
@@ -35,9 +35,9 @@ module.exports = function (service, action, url, callback) {
       { count: num }, 
       { upsert: true }, 
     function (error, result) {
-      if (error) return console.log(error);
+      if (error) return log.error(error);
 
-      console.log('updated cache ('+result+') for ('+service+', '+action+', '+url+')');
+      log.info('updated cache ('+result+') for ('+service+', '+action+', '+url+')');
     });
   });
 };

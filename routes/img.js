@@ -12,7 +12,7 @@ router.get('/img', function (req, res) {
   var action = req.query.action;
   var url = req.query.url;
   
-  console.log('img request', req.query);
+  log.info('img request', req.query);
 
   var invalid = 
     typeof style !== 'string' || 
@@ -27,13 +27,13 @@ router.get('/img', function (req, res) {
 
   if (invalid) {
     var error = new Error('invalid input');
-    console.log(error);
+    log.error(error);
     return res.status(400).send();
   }
 
   count(service, action, url, function (error, count) {
     if (error) {
-      console.log(error);
+      log.error(error);
       return res.status(400).send();
     }
 
@@ -41,11 +41,9 @@ router.get('/img', function (req, res) {
 
     buttons[style](service, action, count, function (error, button) {
       if (error) {
-        console.log(error);
+        log.error(error);
         return res.status(400).send();
       }
-
-      console.log('asd');
 
       res.writeHead(200, {
         'Content-Type': 'image/png',

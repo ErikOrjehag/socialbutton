@@ -4,8 +4,6 @@ var config = require('../config');
 
 var fbToken = config.fbAppId + '|' + config.fbAppSecret;
 
-console.log(fbToken);
-
 // Service: facebook
 module.exports = {
 
