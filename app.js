@@ -12,6 +12,9 @@ fs.readdirSync(__dirname + '/models').forEach(function (filename) {
 
 var app = express();
 
+app.set('views', './views');
+app.set('view engine', 'jade');
+
 app.use(express.static(__dirname + '/public'));
 app.use(img);
 app.use(share);

@@ -1,5 +1,6 @@
 
 var mongoose = require('mongoose');
+var log = require('../log');
 
 mongoose.connect('mongodb://localhost/test');
 

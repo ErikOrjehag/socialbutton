@@ -1,6 +1,7 @@
 
 var router = require('express').Router();
 var count = require('../count/count');
+var log = require('../log');
 
 var buttons = {
   'classic': require('../buttons/classic')
@@ -36,8 +37,6 @@ router.get('/img', function (req, res) {
       log.error(error);
       return res.status(400).send();
     }
-
-    console.log(count);
 
     buttons[style](service, action, count, function (error, button) {
       if (error) {

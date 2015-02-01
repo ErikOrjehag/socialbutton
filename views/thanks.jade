@@ -1,0 +1,18 @@
+html
+  head
+    title Thanks for sharing!
+    link(rel='stylesheet' href='/style.css')
+  body
+    div.thanks
+      h1 Thanks for sharing!
+      button(onclick='javascript:window.history.back()') Go back
+      |  to previous site.
+    script.
+      window.onload = function () {
+        console.log('asd');
+        var winWidth = 520;
+        var winHeight = 420;
+        var winTop = (window.innerHeight - winHeight) / 2;
+        var winLeft = (window.innerWidth - winWidth) / 2;
+        window.open("#{url}", '_blank', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+      };
